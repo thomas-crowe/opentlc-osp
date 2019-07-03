@@ -1,0 +1,6 @@
+parameter_defaults:
+  HostnameMap:
+    overcloud-controller-0: ctrl01
+    overcloud-controller-1: ctrl02
+    overcloud-controller-2: ctrl03
+    overcloud-novacompute-0: compute01-iad

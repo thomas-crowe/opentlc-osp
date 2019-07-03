@@ -1,0 +1,16 @@
+# Environment file demonstrating how to pre-assign IPs to all node types
+resource_registry:
+  OS::TripleO::ControllerDeployedServer::Ports::ExternalPort: /home/stack/compiled-templates/network/ports/external_from_pool.yaml
+  OS::TripleO::ComputeDeployedServer::Ports::ExternalPort: /home/stack/compiled-templates//network/ports/external_from_pool.yaml
+
+parameter_defaults:
+  ControllerDeployedServerIPs:
+    # Each controller will get an IP from the lists below, first controller, first IP
+    external:
+    - 169.45.205.67
+    - 169.45.205.68
+    - 169.45.205.69
+  ComputeDeployedServerIPs:
+    # Each compute will get an IP from the lists below, first compute, first IP
+    external:
+    - 169.45.205.70

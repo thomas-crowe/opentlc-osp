@@ -1,0 +1,11 @@
+# Enable the creation of Neutron networks for isolated Overcloud
+# traffic and configure each role to assign ports (related
+# to that role) on these networks.
+# primary role is: ControllerDeployedServer
+resource_registry:
+  # networks as defined in network_data.yaml
+  OS::TripleO::Network::External: /home/stack/compiled-templates/network/external.yaml
+
+  # Port assignments for the VIPs
+  OS::TripleO::Network::Ports::ExternalVipPort: /home/stack/compiled-templates/network/ports/external.yaml
+  OS::TripleO::Network::Ports::RedisVipPort: /home/stack/compiled-templates/network/ports/vip.yaml
