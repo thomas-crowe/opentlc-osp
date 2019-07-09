@@ -28,7 +28,7 @@ parameter_defaults:
     NovaApiNetwork: ctlplane
     NovaPlacementNetwork: ctlplane
     NovaMetadataNetwork: ctlplane
-    NovaVncProxyNetwork: external
+    NovaVncProxyNetwork: ctlplane
     NovaLibvirtNetwork: ctlplane
     NovajoinNetwork: ctlplane
     Ec2ApiNetwork: ctlplane
@@ -44,7 +44,7 @@ parameter_defaults:
     RabbitmqNetwork: ctlplane
     QdrNetwork: ctlplane
     RedisNetwork: ctlplane
-    GaneshaNetwork: ctlplane_nfs
+    GaneshaNetwork: ctlplane
     MysqlNetwork: ctlplane
     SnmpdNetwork: ctrlplane
     CephClusterNetwork: ctlplane

@@ -2,8 +2,6 @@ resource_registry:
   OS::TripleO::Server: /home/stack/compiled-templates/deployed-server/deployed-server.yaml
   OS::TripleO::DeployedServer::ControlPlanePort: OS::Neutron::Port
   OS::TripleO::DeployedServer::Bootstrap: OS::Heat::None
-
-
   # Default nic config mappings
   OS::TripleO::ControllerDeployedServer::Net::SoftwareConfig: /home/stack/templates/net-config-static.yaml
   OS::TripleO::ComputeDeployedServer::Net::SoftwareConfig: /home/stack/templates/net-config-static-compute.yaml
@@ -14,6 +12,9 @@ parameter_defaults:
   ExternalInterfaceDefaultRoute: '169.45.205.66'
   ExternalNetworkVlanID: 0
   InternalApiNetName: ''
+
+  HypervisorNeutronPublicInterface: bond1
+  NeutronPublicInterface: eth0
 
   DnsServers: [8.8.8.8,1.1.1.1]
   NeutronNetworkType: 'vxlan'

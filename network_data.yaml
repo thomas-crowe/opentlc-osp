@@ -4,7 +4,7 @@
   vlan: 0
   ip_subnet: '169.45.205.64/26'
   allocation_pools: [{'start': '169.45.205.100', 'end': '169.45.205.126'}]
-  gateway_ip: '169.45.205.66'
+  gateway_ip: '169.45.205.65'
 - name: InternalApi
   name_lower: internal_api
   vip: true
