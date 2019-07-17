@@ -9,7 +9,7 @@ resource_registry:
 parameter_defaults:
   ExternalNetCidr: '169.45.205.64/26'
   ExternalAllocationPools: [{'start': '169.45.205.100', 'end': '169.45.205.126'}]
-  ExternalInterfaceDefaultRoute: '169.45.205.66'
+  ExternalInterfaceDefaultRoute: '169.45.205.65'
   ExternalNetworkVlanID: 0
   InternalApiNetName: ''
 
@@ -19,7 +19,9 @@ parameter_defaults:
   DnsServers: [8.8.8.8,1.1.1.1]
   NeutronNetworkType: 'vxlan'
   NeutronTunnelTypes: 'vxlan'
-  NeutronPhysicalBridge: br-ex
+  NeutronTypeDrivers: ['vxlan', 'flat', 'vlan']
+  NeutronExternalNetworkBridge: "br-ex"
+  NeutronEnableDVR: false
 
   ControlFixedIPs: [{'ip_address':'10.149.23.100'}]
   PublicVirtualFixedIPs: [{'ip_address':'169.45.205.100'}]

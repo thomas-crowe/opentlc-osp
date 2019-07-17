@@ -136,10 +136,10 @@ resources:
                   members:
                   - 
                     type: interface
-                    name: int1
+                    name: eth1
                   - 
                     type: interface
-                    name: int3
+                    name: eth3
 
               - type: linux_bond
                 name: bond0
@@ -148,10 +148,10 @@ resources:
                 members:
                   - 
                     type: interface
-                    name: int0
+                    name: eth0
                   - 
                     type: interface
-                    name: int2
+                    name: eth2
                 dns_servers:
                   get_param: DnsServers
                 addresses:
