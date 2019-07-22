@@ -143,15 +143,18 @@ resources:
 
               - type: linux_bond
                 name: bond0
+                mtu: 9000
                 bonding_options: "mode=4 miimon=100 downdelay=0 updelay=0 lacp_rate=fast xmit_hash_policy=1"
                 use_dhcp: false
                 members:
                   - 
                     type: interface
                     name: eth0
+                    mtu: 9000
                   - 
                     type: interface
                     name: eth2
+                    mtu: 9000
                 dns_servers:
                   get_param: DnsServers
                 addresses:
@@ -164,6 +167,8 @@ resources:
                 - ip_netmask: 169.254.169.254/32
                   next_hop:
                     get_param: EC2MetadataIp
+                - ip_netmask: 10.0.0.0/24
+                  next_hop: 10.149.23.1
 outputs:
   OS::stack_id:
     description: The OsNetConfigImpl resource.
